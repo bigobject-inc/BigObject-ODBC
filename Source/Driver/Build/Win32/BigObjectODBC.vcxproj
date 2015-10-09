@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD3949D-8514-4FB8-A893-B65726F6E03D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BigObjectODBC</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;BIGOBJECTODBC_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_SCL_SECURE_NO_WARNINGS;_BIND_TO_CURRENT_OPENMP_VERSION;CURL_STATICLIB;FUSION_MAX_VECTOR_SIZE=50;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(LIB_DIR)\boost\include;$(LIB_DIR)\log4cplus\include;$(LIB_DIR)\utf8\include;$(LIB_DIR)\jsoncpp\include;$(LIB_DIR)\curl\include;$(BOOST_HOME)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>$(SolutionDir)\Driver.def</ModuleDefinitionFile>
+      <AdditionalDependencies>log4cplusSUD.lib;jsoncpp-d.lib;libcurl-d.lib;libeay32MD.lib;ssleay32MD.lib;%(AdditionalDependencies);wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LIB_DIR)\boost\windows\lib\x86;$(LIB_DIR)\log4cplus\windows\lib\x86;$(LIB_DIR)\jsoncpp\windows\lib\x86;$(LIB_DIR)\curl\windows\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;BIGOBJECTODBC_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_BIND_TO_CURRENT_OPENMP_VERSION;CURL_STATICLIB;FUSION_MAX_VECTOR_SIZE=50;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(LIB_DIR)\boost\include;$(LIB_DIR)\log4cplus\include;$(LIB_DIR)\utf8\include;$(LIB_DIR)\jsoncpp\include;$(LIB_DIR)\curl\include;$(BOOST_HOME)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>$(SolutionDir)\Driver.def</ModuleDefinitionFile>
+      <AdditionalDependencies>log4cplusSUD.lib;jsoncpp-d.lib;libcurl-d.lib;libeay32MD.lib;ssleay32MD.lib;%(AdditionalDependencies);wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LIB_DIR)\boost\windows\lib\x64;$(LIB_DIR)\log4cplus\windows\lib\x64;$(LIB_DIR)\jsoncpp\windows\lib\x64;$(LIB_DIR)\curl\windows\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;BIGOBJECTODBC_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_SCL_SECURE_NO_WARNINGS;_BIND_TO_CURRENT_OPENMP_VERSION;CURL_STATICLIB;FUSION_MAX_VECTOR_SIZE=50;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(LIB_DIR)\boost\include;$(LIB_DIR)\log4cplus\include;$(LIB_DIR)\utf8\include;$(LIB_DIR)\jsoncpp\include;$(LIB_DIR)\curl\include;$(BOOST_HOME)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>$(SolutionDir)\Driver.def</ModuleDefinitionFile>
+      <AdditionalDependencies>log4cplusSU.lib;jsoncpp.lib;libcurl.lib;libeay32MD.lib;ssleay32MD.lib;%(AdditionalDependencies);wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LIB_DIR)\boost\windows\lib\x86;$(LIB_DIR)\log4cplus\windows\lib\x86;$(LIB_DIR)\jsoncpp\windows\lib\x86;$(LIB_DIR)\curl\windows\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;BIGOBJECTODBC_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_SCL_SECURE_NO_WARNINGS;_BIND_TO_CURRENT_OPENMP_VERSION;CURL_STATICLIB;FUSION_MAX_VECTOR_SIZE=50;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(LIB_DIR)\boost\include;$(LIB_DIR)\log4cplus\include;$(LIB_DIR)\utf8\include;$(LIB_DIR)\jsoncpp\include;$(LIB_DIR)\curl\include;$(BOOST_HOME)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>$(SolutionDir)\Driver.def</ModuleDefinitionFile>
+      <AdditionalDependencies>log4cplusSU.lib;jsoncpp.lib;libcurl.lib;libeay32MD.lib;ssleay32MD.lib;%(AdditionalDependencies);wsock32.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LIB_DIR)\boost\windows\lib\x64;$(LIB_DIR)\log4cplus\windows\lib\x64;$(LIB_DIR)\jsoncpp\windows\lib\x64;$(LIB_DIR)\curl\windows\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Base\CRTP.hpp" />
+    <ClInclude Include="..\..\..\Base\Debug.hpp" />
+    <ClInclude Include="..\..\..\Base\FileUtil.hpp" />
+    <ClInclude Include="..\..\..\Base\OptionMap.hpp" />
+    <ClInclude Include="..\..\..\Base\Parallel.hpp" />
+    <ClInclude Include="..\..\..\Base\Platform.hpp" />
+    <ClInclude Include="..\..\..\Base\TString.hpp" />
+    <ClInclude Include="..\..\..\Base\Util.hpp" />
+    <ClInclude Include="..\..\..\Logging\Logging.hpp" />
+    <ClInclude Include="..\..\API\APIHook.hpp" />
+    <ClInclude Include="..\..\API\Descriptor.hpp" />
+    <ClInclude Include="..\..\API\Diagnostic.hpp" />
+    <ClInclude Include="..\..\API\Driver.hpp" />
+    <ClInclude Include="..\..\API\DriverExtras.hpp" />
+    <ClInclude Include="..\..\API\Helper.hpp" />
+    <ClInclude Include="..\..\API\Impl\BigObjectAPIImpl.hpp" />
+    <ClInclude Include="..\..\Client\Client.hpp" />
+    <ClInclude Include="..\..\Client\ColumnDescriptor.hpp" />
+    <ClInclude Include="..\..\Client\Connection.hpp" />
+    <ClInclude Include="..\..\Client\Detail\ColumnDescriptor.hpp" />
+    <ClInclude Include="..\..\Client\Detail\ResultSet.hpp" />
+    <ClInclude Include="..\..\Client\Detail\Row.hpp" />
+    <ClInclude Include="..\..\Client\Detail\Service.hpp" />
+    <ClInclude Include="..\..\Client\Exception.hpp" />
+    <ClInclude Include="..\..\Client\Impl\BaseServiceImpl.hpp" />
+    <ClInclude Include="..\..\Client\Impl\BigObjectServiceImpl.hpp" />
+    <ClInclude Include="..\..\Client\Impl\CSVServiceImpl.hpp" />
+    <ClInclude Include="..\..\Client\ResultSet.hpp" />
+    <ClInclude Include="..\..\Client\Row.hpp" />
+    <ClInclude Include="..\..\Client\Service.hpp" />
+    <ClInclude Include="..\..\Client\ServiceImpl.hpp" />
+    <ClInclude Include="..\..\Define.h" />
+    <ClInclude Include="..\..\Driver.hpp" />
+    <ClInclude Include="..\..\Impl.hpp" />
+    <ClInclude Include="..\..\Version.hpp" />
+    <ClInclude Include="Resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Driver.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\API\ConfigDSN.cpp" />
+    <ClCompile Include="..\..\API\SQLAllocConnect.cpp" />
+    <ClCompile Include="..\..\API\SQLAllocEnv.cpp" />
+    <ClCompile Include="..\..\API\SQLAllocHandle.cpp" />
+    <ClCompile Include="..\..\API\SQLAllocStmt.cpp" />
+    <ClCompile Include="..\..\API\SQLBindCol.cpp" />
+    <ClCompile Include="..\..\API\SQLBindParameter.cpp" />
+    <ClCompile Include="..\..\API\SQLBrowseConnect.cpp" />
+    <ClCompile Include="..\..\API\SQLBulkOperations.cpp" />
+    <ClCompile Include="..\..\API\SQLCancel.cpp" />
+    <ClCompile Include="..\..\API\SQLCloseCursor.cpp" />
+    <ClCompile Include="..\..\API\SQLColAttribute.cpp" />
+    <ClCompile Include="..\..\API\SQLColAttributes.cpp" />
+    <ClCompile Include="..\..\API\SQLColumnPrivileges.cpp" />
+    <ClCompile Include="..\..\API\SQLColumns.cpp" />
+    <ClCompile Include="..\..\API\SQLConnect.cpp" />
+    <ClCompile Include="..\..\API\SQLCopyDesc.cpp" />
+    <ClCompile Include="..\..\API\SQLDescribeCol.cpp" />
+    <ClCompile Include="..\..\API\SQLDescribeParam.cpp" />
+    <ClCompile Include="..\..\API\SQLDisconnect.cpp" />
+    <ClCompile Include="..\..\API\SQLDriverConnect.cpp" />
+    <ClCompile Include="..\..\API\SQLEndTran.cpp" />
+    <ClCompile Include="..\..\API\SQLError.cpp" />
+    <ClCompile Include="..\..\API\SQLExecDirect.cpp" />
+    <ClCompile Include="..\..\API\SQLExecute.cpp" />
+    <ClCompile Include="..\..\API\SQLExtendedFetch.cpp" />
+    <ClCompile Include="..\..\API\SQLFetch.cpp" />
+    <ClCompile Include="..\..\API\SQLFetchScroll.cpp" />
+    <ClCompile Include="..\..\API\SQLForeignKeys.cpp" />
+    <ClCompile Include="..\..\API\SQLFreeConnect.cpp" />
+    <ClCompile Include="..\..\API\SQLFreeEnv.cpp" />
+    <ClCompile Include="..\..\API\SQLFreeHandle.cpp" />
+    <ClCompile Include="..\..\API\SQLFreeStmt.cpp" />
+    <ClCompile Include="..\..\API\SQLGetConnectAttr.cpp" />
+    <ClCompile Include="..\..\API\SQLGetConnectOption.cpp" />
+    <ClCompile Include="..\..\API\SQLGetCursorName.cpp" />
+    <ClCompile Include="..\..\API\SQLGetData.cpp" />
+    <ClCompile Include="..\..\API\SQLGetDescField.cpp" />
+    <ClCompile Include="..\..\API\SQLGetDescRec.cpp" />
+    <ClCompile Include="..\..\API\SQLGetDiagField.cpp" />
+    <ClCompile Include="..\..\API\SQLGetDiagRec.cpp" />
+    <ClCompile Include="..\..\API\SQLGetEnvAttr.cpp" />
+    <ClCompile Include="..\..\API\SQLGetInfo.cpp" />
+    <ClCompile Include="..\..\API\SQLGetStmtAttr.cpp" />
+    <ClCompile Include="..\..\API\SQLGetStmtOption.cpp" />
+    <ClCompile Include="..\..\API\SQLGetTypeInfo.cpp" />
+    <ClCompile Include="..\..\API\SQLMoreResults.cpp" />
+    <ClCompile Include="..\..\API\SQLNativeSql.cpp" />
+    <ClCompile Include="..\..\API\SQLNumParams.cpp" />
+    <ClCompile Include="..\..\API\SQLNumResultCols.cpp" />
+    <ClCompile Include="..\..\API\SQLParamData.cpp" />
+    <ClCompile Include="..\..\API\SQLParamOptions.cpp" />
+    <ClCompile Include="..\..\API\SQLPrepare.cpp" />
+    <ClCompile Include="..\..\API\SQLPrimaryKeys.cpp" />
+    <ClCompile Include="..\..\API\SQLProcedureColumns.cpp" />
+    <ClCompile Include="..\..\API\SQLProcedures.cpp" />
+    <ClCompile Include="..\..\API\SQLPutData.cpp" />
+    <ClCompile Include="..\..\API\SQLRowCount.cpp" />
+    <ClCompile Include="..\..\API\SQLSetConnectAttr.cpp" />
+    <ClCompile Include="..\..\API\SQLSetConnectOption.cpp" />
+    <ClCompile Include="..\..\API\SQLSetCursorName.cpp" />
+    <ClCompile Include="..\..\API\SQLSetDescField.cpp" />
+    <ClCompile Include="..\..\API\SQLSetDescRec.cpp" />
+    <ClCompile Include="..\..\API\SQLSetEnvAttr.cpp" />
+    <ClCompile Include="..\..\API\SQLSetParam.cpp" />
+    <ClCompile Include="..\..\API\SQLSetPos.cpp" />
+    <ClCompile Include="..\..\API\SQLSetScrollOptions.cpp" />
+    <ClCompile Include="..\..\API\SQLSetStmtAttr.cpp" />
+    <ClCompile Include="..\..\API\SQLSetStmtOption.cpp" />
+    <ClCompile Include="..\..\API\SQLSpecialColumns.cpp" />
+    <ClCompile Include="..\..\API\SQLStatistics.cpp" />
+    <ClCompile Include="..\..\API\SQLTablePrivileges.cpp" />
+    <ClCompile Include="..\..\API\SQLTables.cpp" />
+    <ClCompile Include="..\..\API\SQLTransact.cpp" />
+    <ClCompile Include="..\..\API\_Descriptor.cpp" />
+    <ClCompile Include="..\..\API\_Diagnostic.cpp" />
+    <ClCompile Include="..\..\API\_Helper.cpp" />
+    <ClCompile Include="..\..\Client\Detail\ColumnDescriptor.cpp" />
+    <ClCompile Include="..\..\Client\Detail\Exception.cpp" />
+    <ClCompile Include="..\..\Client\Detail\ResultSet.cpp" />
+    <ClCompile Include="..\..\Client\ServiceImpl.cpp" />
+    <ClCompile Include="..\..\Main.cpp" />
+    <ClCompile Include="..\..\Version.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Driver.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\API">
+      <UniqueIdentifier>{97e47e17-fe5e-4c61-b05e-dac45d1fb9be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\API">
+      <UniqueIdentifier>{a922445c-feef-4d6c-af41-136aeaf35a18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Client">
+      <UniqueIdentifier>{16fb27ea-1437-4f06-bf64-b5e89b28876d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Client\Impl">
+      <UniqueIdentifier>{111134e8-fabf-4efa-92c7-4144180503e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Client">
+      <UniqueIdentifier>{ccbca726-0167-458a-a4f9-9bc0e057b7ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\API\Impl">
+      <UniqueIdentifier>{03dc935d-722f-4b91-a3bd-5b730b3e92ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Client\Detail">
+      <UniqueIdentifier>{0c4f00e6-0e52-4958-aea5-5c3c75d75a75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Client\Detail">
+      <UniqueIdentifier>{e8b0c5eb-68df-45c8-8b57-b270702001e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Version.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\CRTP.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\Debug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\FileUtil.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\OptionMap.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\Parallel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\Platform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\TString.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Base\Util.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Logging\Logging.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Driver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\Driver.hpp">
+      <Filter>Header Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\DriverExtras.hpp">
+      <Filter>Header Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Connection.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Service.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Exception.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Client.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\ResultSet.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\ColumnDescriptor.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\ServiceImpl.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Row.hpp">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Impl\CSVServiceImpl.hpp">
+      <Filter>Header Files\Client\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Impl\BaseServiceImpl.hpp">
+      <Filter>Header Files\Client\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\APIHook.hpp">
+      <Filter>Header Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\Impl\BigObjectAPIImpl.hpp">
+      <Filter>Header Files\API\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Impl\BigObjectServiceImpl.hpp">
+      <Filter>Header Files\Client\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Detail\Row.hpp">
+      <Filter>Header Files\Client\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Detail\ResultSet.hpp">
+      <Filter>Header Files\Client\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Detail\ColumnDescriptor.hpp">
+      <Filter>Header Files\Client\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Client\Detail\Service.hpp">
+      <Filter>Header Files\Client\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\Descriptor.hpp">
+      <Filter>Header Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\Diagnostic.hpp">
+      <Filter>Header Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\API\Helper.hpp">
+      <Filter>Header Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Driver.def">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\API\SQLDriverConnect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLExecDirect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLPrepare.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLExecute.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLAllocHandle.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLAllocEnv.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLAllocConnect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLAllocStmt.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLBindCol.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLCancel.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLColAttributes.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLConnect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLDescribeCol.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLDisconnect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLError.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetDescRec.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetDiagRec.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLFetch.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLFreeConnect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLFreeEnv.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLFreeStmt.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetCursorName.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLNumResultCols.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLRowCount.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetCursorName.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetParam.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLTransact.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLColumns.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetConnectOption.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetData.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetInfo.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetStmtOption.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetTypeInfo.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLParamData.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLPutData.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetConnectOption.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetStmtOption.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSpecialColumns.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLStatistics.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLTables.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLBrowseConnect.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLColumnPrivileges.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLDescribeParam.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLExtendedFetch.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLForeignKeys.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLMoreResults.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLNativeSql.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLNumParams.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLParamOptions.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLPrimaryKeys.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLProcedureColumns.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLProcedures.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetPos.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetScrollOptions.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLTablePrivileges.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLBindParameter.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLCloseCursor.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLColAttribute.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLCopyDesc.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLEndTran.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLFetchScroll.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLFreeHandle.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetConnectAttr.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetDiagField.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetDescField.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetEnvAttr.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLGetStmtAttr.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetConnectAttr.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetDescField.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetDescRec.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetEnvAttr.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLSetStmtAttr.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\SQLBulkOperations.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\_Helper.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Client\Detail\ColumnDescriptor.cpp">
+      <Filter>Source Files\Client\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Client\Detail\ResultSet.cpp">
+      <Filter>Source Files\Client\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Client\Detail\Exception.cpp">
+      <Filter>Source Files\Client\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\_Descriptor.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\_Diagnostic.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Client\ServiceImpl.cpp">
+      <Filter>Source Files\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\API\ConfigDSN.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Driver.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
