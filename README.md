@@ -1,6 +1,6 @@
 # BigObject-ODBC
 
-BigObject-ODBC is a ODBC connetor to [BigOBject](https://hub.docker.com/r/bigobject/bigobject/) Analytics Database via rest API. 
+BigObject-ODBC is a ODBC connetor to [BigOBject](https://hub.docker.com/r/bigobject/bigobject/) Analytics Database via rest API. The current version of BigObject-ODBC only supports read-only commands **SELECT** and **FIND**.
 
 ## Required Library
 
@@ -11,6 +11,17 @@ BigObject-ODBC is a ODBC connetor to [BigOBject](https://hub.docker.com/r/bigobj
 * libcurl 7.42.1
 * OpenSSL 1.0.2a
 * UTF8-CPP 2.3.4
+
+## Unsupported commands
+
+* BUILD/CREATE
+* SHOW
+* INSERT
+* DROP
+* TRIM
+* APPLY
+* GET
+
 
 ## ODBC 3.51 API status
 
