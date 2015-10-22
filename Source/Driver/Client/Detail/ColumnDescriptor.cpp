@@ -189,7 +189,7 @@ int ColumnDescriptor::GetSQLType(ServerType serverType)
    return SQL_DOUBLE;
 
   case SERVER_STRING_TYPE:
-   return SQL_VARCHAR;
+   return SQL_WVARCHAR;
 
   case SERVER_DATE_TYPE:
    return SQL_TYPE_DATE;

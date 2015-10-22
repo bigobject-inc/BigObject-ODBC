@@ -182,8 +182,9 @@ public:
    "Err":""
   }
   */   
-  if(fetchIndex == -1)
-   return 0;
+  if (fetchIndex == -1) {
+	  return 0;
+  }
 
   // #TODO: If maxRows > 1000?.
 
@@ -203,6 +204,11 @@ public:
 
   // Update fetch index.
   fetchIndex = contentJson.get("index", -1).asInt();
+
+  if (fetchIndex == -1) {
+	  std::string gc_del = "GC DEL " + resource;
+	  SendRequest(gc_del);
+  }
   
   // Read data.
   Json::Value dataJson = contentJson["content"];
@@ -718,7 +724,7 @@ private:
   std::string t2(t);
   boost::algorithm::to_upper(t2);
 
-  if(t2 == "STRING" || t2 == "BYTE")
+  if(t2 == "STRING" || t2 == "VARSTRING" || t2 == "BYTE" || t2 == "WEEK")
    return SERVER_STRING_TYPE;
   else if(t2 == "INTEGER" || t2 == "INT32")
    return SERVER_INT_TYPE;
