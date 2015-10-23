@@ -18,6 +18,7 @@
 
 #include <string>
 #include <sstream>
+#include <codecvt>
 
 #include <boost/algorithm/string.hpp>
 
@@ -218,9 +219,10 @@ public:
    
    ODBCDriver::StringRow::StoragePtrType row(
     new ODBCDriver::StringRow::StorageType);
-
+   
+   std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
    for(std::size_t j = 0; j < rowJson.size(); ++j)
-    row->push_back(ODBC_STR_TO_TSTR(rowJson.get((int)j, "").asString()));
+	   row->push_back(converter.from_bytes(rowJson.get((int)j, "").asString()));
 
    container.push_back(row);
   }
