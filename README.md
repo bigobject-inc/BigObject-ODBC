@@ -1,4 +1,6 @@
-# BigObject-ODBC
+# BigObject-ODBC (deprecated)
+
+BigObject-ODBC is no longer supported. Users are encouraged to use MySQL ODBC to access BigObject Analytics Database.
 
 BigObject-ODBC is a ODBC connetor to [BigOBject](https://hub.docker.com/r/bigobject/bigobject/) Analytics Database via rest API. The current version of BigObject-ODBC only supports read-only commands **SELECT** and **FIND**.
 
